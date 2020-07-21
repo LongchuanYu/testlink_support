@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" href="css/layui.css">
+	<link rel="stylesheet" type="text/css" href="inject.css" />
+</head>
+<body>
+	<div class = "inject-container layui-fluid">
+		<!--nav-->
+		<div class="layui-tab layui-tab-brief">
+			<ul class="layui-tab-title">
+				<li class="layui-this">Fun1</li>
+				<li>Fun2</li>
+				<li>Fun3</li>
+			</ul>
+		</div>
+		
+		<!-- page -->
+		<div class = "inject-pagecontainer">
+		
+			<!-- page 1 -->
+			<div class = 'inject-page injet-page-1'>
+				<div>
+					<div class="layui-btn-group">
+						<button class="layui-btn layui-btn-xs" type="button" id="inject-page1-btn">OK</button>
+						<button class="layui-btn layui-btn-xs" type="button" id="inject-page1-stop">Stop</button>					
+					</div>
+
+						
+					<input type="checkbox" id="inject-page1-ck"/>
+					<label class="inject-checkbox" for="inject-page1-ck">
+						<span class="inject-align-checkbox">Cover?</span>
+						<i class="inject-align-checkbox"></i>
+					</label>
+					
+					<!-- class="inject-align-checkbox" -->
+
+				</div>	
+				
+				
+				<div class="inject-input-container">
+					<textarea rows="10" cols="33" id="inject-page1-sec1"></textarea>
+					<textarea rows="10" cols="33" id="inject-page2-sec2"></textarea>
+				</div>
+				
+				
+				<div class="inject-log inject-page1-log">
+				</div>
+			</div>
+			
+			<!-- page 2 -->
+			<div class = "inject-page inject-page-2" style="display:none;">
+				<div>
+					<span>No.</span><input type="text" class="input-com page2-input" ></input>
+					<span>sign</span><input type="text" class="input-com page2-sign" ></input>
+				</div>
+				<button id="inject-page2-btn">click</button>
+				<button id="inject-page2-stop">stop</button>
+				<div class="inject-log inject-page2-log">
+				</div>
+			</div>
+
+
+			<div class = "inject-page inject-page-3" style="display:none;">
+				<input type="checkbox" id="inject-page3-ck" >shortcut</input>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+
+	<script src="inject.js"></script>
+</body>
+
+</html>

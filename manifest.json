@@ -1,0 +1,41 @@
+{
+    "name": "new",
+    "version": "1.0",
+    "description": "For Testlink",
+    "manifest_version": 2,
+    "permissions": [
+			"tabs",
+    	"activeTab",
+    	"declarativeContent",
+      "storage"
+  	],
+    "background":{
+    	"persistent":false,
+    	"scripts":["background.js"]
+    },
+
+    "browser_action":{
+			
+    	"default_icon":"CI.png",
+    	"default_title":"new"
+			
+    },
+		"content_scripts":[
+			{
+				"all_frames": false,
+				"run_at": "document_end",
+				"matches":["*://165.96.198.153/*"],
+				"js":["jquery.js","content.js"]
+			},{
+				"all_frames": true,
+				"run_at": "document_end",
+				"matches":[
+					"*://165.96.198.153/testlink/lib/testcases/*"
+				],
+				"js":["jquery.js","myjs.js"],
+				"css":["mycss.css"]
+			}
+		],
+		"web_accessible_resources": [ "inject.html","inject.js" ]
+
+}
